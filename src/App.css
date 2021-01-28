@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
+:root {
+  --backgroundColor: rgb(255, 255, 255);
+  --textColor: rgb(15, 15, 15);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Futura", sans-serif;
+  font-size: 14px;
 }
 
-.App-header {
-  background-color: #282c34;
+.app {
+  background-color: var(--backgroundColor);
+  color: var(--textColor);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+  background-color: var(--textColor);
+  color: var(--backgroundColor);
+  border-radius: 5px;
+  padding: 5pt;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input {
+  background-color: var(--backgroundColor);
+  width: 15%;
+  height: 5vh;
+  border: solid 5px var(--textColor);
+  border-radius: 5px;
+  font-size: larger;
+  transition: all 0.25s;
+}
+
+.input:hover {
+  background-color: var(--textColor);
+  color: var(--backgroundColor);
+}
+
+.input:focus {
+  background-color: var(--textColor);
+  outline: none;
+  border-radius: 3px 10px;
+  color: var(--backgroundColor);
 }
