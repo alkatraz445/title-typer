@@ -14,14 +14,23 @@ body {
   font-size: 14px;
 }
 
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .app {
   background-color: var(--backgroundColor);
   color: var(--textColor);
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.typer {
   justify-content: center;
+  width: 100%;
 }
 
 .title {
@@ -39,6 +48,7 @@ body {
   border: solid 5px var(--textColor);
   border-radius: 5px;
   font-size: larger;
+  text-align: center;
   transition: all 0.25s;
 }
 
@@ -52,4 +62,25 @@ body {
   outline: none;
   border-radius: 3px 10px;
   color: var(--backgroundColor);
+}
+
+.link {
+  position: relative;
+  text-decoration: none;
+  color: #61dbfb;
+}
+
+.link:after {
+  content: "";
+  position: absolute;
+  background-color: #61dbfb;
+  width: 0;
+  transition: width 0.2s ease 0s;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+}
+
+.link:hover:after {
+  width: 100%;
 }
